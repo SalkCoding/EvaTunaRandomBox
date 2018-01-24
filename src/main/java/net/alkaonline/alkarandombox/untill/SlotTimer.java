@@ -85,7 +85,7 @@ public class SlotTimer implements Runnable {
             if (box.getEpicSet().get(reward)) {
                 for (Player online : Bukkit.getOnlinePlayers()) {
                     online.sendMessage(Constants.MESSAGE_PREFIX
-                            + box.getEpic().replaceAll("<item>", LanguageHelper.getItemName(item, player) + " " + item.getAmount())
+                            + box.getEpic().replaceAll("<item>", LanguageHelper.getItemName(item, online) + " " + item.getAmount())
                             .replace("<player>", player.getDisplayName()).replace("<box>", box.getDisplayName()));
                 }
             }

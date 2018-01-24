@@ -45,9 +45,11 @@ public class PlayerInteractListener implements Listener {
         if (box != null) {
             List<String> lore = meta.getLore();
             List<String> boxLore = box.getLore();
-            for (int i = 0; i < Math.min(lore.size(), boxLore.size()); i++) {
-                if (!(boxLore.get(i).equals(lore.get(i)))) {
-                    return;
+            if (!lore.get(0).contains("박스")) {
+                for (int i = 0; i < Math.min(lore.size(), boxLore.size()); i++) {
+                    if (!(boxLore.get(i).equals(lore.get(i)))) {
+                        return;
+                    }
                 }
             }
             if (player.getGameMode() != GameMode.SURVIVAL) {

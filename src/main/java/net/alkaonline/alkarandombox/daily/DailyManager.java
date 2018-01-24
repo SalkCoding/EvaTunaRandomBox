@@ -25,6 +25,7 @@ public class DailyManager {
     }
 
     public void saveToConfig(Configuration config) {
+        config.set("day", day);
         config.set("playersReceivedDailyRewards", playersReceivedDailyRewards.stream().map(UUID::toString).collect(Collectors.toList()));
     }
 
