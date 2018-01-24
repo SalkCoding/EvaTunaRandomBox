@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'net.alkaonline'
+version '1.0.9-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    jcenter()
+    maven {
+        name 'SpigotMC Repository'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    maven {
+        name 'Sonatype OSSRH'
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+    maven {
+        name 'LanguageUtils Repository'
+        url 'https://raw.github.com/MascusJeoraly/LanguageUtils/mvn-repo/'
+    }
+}
+
+dependencies {
+    compile group: 'org.bukkit', name: 'bukkit', version: '1.12.2-R0.1-SNAPSHOT'
+    compile group: 'com.meowj', name: 'LangUtils', version: '1.9'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

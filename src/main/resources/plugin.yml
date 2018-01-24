@@ -1,0 +1,6 @@
+name: AlkaRandomBox
+main: net.alkaonline.alkarandombox.AlkaRandomBox
+version: 1.0.8
+commands:
+  랜덤박스:
+    description: reload config
