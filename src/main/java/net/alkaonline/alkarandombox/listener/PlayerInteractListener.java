@@ -1,5 +1,6 @@
 package net.alkaonline.alkarandombox.listener;
 
+import com.wasteofplastic.askyblock.ASkyBlockAPI;
 import net.alkaonline.alkarandombox.AlkaRandomBox;
 import net.alkaonline.alkarandombox.boxmanager.Box;
 import net.alkaonline.alkarandombox.untill.Constants;
@@ -54,6 +55,10 @@ public class PlayerInteractListener implements Listener {
             }
             if (player.getGameMode() != GameMode.SURVIVAL) {
                 player.sendMessage(Constants.MESSAGE_PREFIX + ChatColor.YELLOW + "서바이벌 모드에서만 사용 가능합니다.");
+                return;
+            }
+            if (!ASkyBlockAPI.getInstance().hasIsland(player.getUniqueId())) {
+                player.sendMessage(Constants.MESSAGE_PREFIX + ChatColor.YELLOW + "/is로 섬을 만든 후 사용해 주세요.");
                 return;
             }
             randomSlot(player, box);

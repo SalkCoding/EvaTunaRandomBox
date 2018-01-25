@@ -1,7 +1,7 @@
 name: AlkaRandomBox
 main: net.alkaonline.alkarandombox.AlkaRandomBox
 version: 1.0.9-SNAPSHOT
-depend: [LangUtils]
+depend: [LangUtils, ASkyBlock]
 commands:
   랜덤박스:
     description: reload config

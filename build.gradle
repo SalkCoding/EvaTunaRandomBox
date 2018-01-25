@@ -21,11 +21,20 @@ repositories {
         name 'LanguageUtils Repository'
         url 'https://raw.github.com/MascusJeoraly/LanguageUtils/mvn-repo/'
     }
+    maven {
+        name 'Tastybento Repository'
+        url 'https://dl.bintray.com/tastybento/maven-repo/'
+    }
+    maven {
+        name 'Herocraft Repository'
+        url 'http://nexus.hc.to/content/repositories/pub_releases/'
+    }
 }
 
 dependencies {
     compile group: 'org.bukkit', name: 'bukkit', version: '1.12.2-R0.1-SNAPSHOT'
     compile group: 'com.meowj', name: 'LangUtils', version: '1.9'
+    compile group: 'com.wasteofplastic', name: 'askyblock',  version: '3.0.8.2'
 }
 
 tasks.withType(JavaCompile) {
