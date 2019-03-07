@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EvaTunaRandomBox:jar">
+    <output-path>$PROJECT_DIR$/../../../../Minecraft/Plugin Test Bukkit/plugins</output-path>
+    <root id="archive" name="EvaTunaRandomBox.jar">
+      <element id="module-output" name="EvaTunaRandomBox" />
+    </root>
+  </artifact>
+</component>

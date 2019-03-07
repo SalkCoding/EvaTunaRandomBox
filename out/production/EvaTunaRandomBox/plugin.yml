@@ -1,0 +1,9 @@
+name: EvaTunaRandomBox
+main: net.alkaonline.alkarandombox.AlkaRandomBox
+version: 1.1.1-SNAPSHOT
+api-version: 1.13
+depend: [LangUtils]
+commands:
+  RandomBox:
+    description: reload config
+    aliases: [rb,randombox,랜덤박스.랜박]
